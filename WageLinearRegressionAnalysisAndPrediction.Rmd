@@ -1,0 +1,46 @@
+---
+title: "Wage linear regression analysis and prediction"
+author: "Marcela Castro León"
+date: "April 18, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction 
+
+This is the presentation of the final project of Data Product Course. 
+This peer assessed assignment has two parts. 
+
+-First, I created a Shiny application and deployed it on Rstudio's servers. 
+
+-Second, I prepared this presentation about my application.
+
+## Shiny Application
+
+The name of the application is "Wage linear regression analysis and prediction".
+
+This app uses the dataset Wage to show the linear regression of Wage. You can chose 
+the predictor among Year, age, Education and race.
+
+Moreover, you can predict the wage ($) of a person by entering the year, age, education and race.
+
+
+## Instructions to run it 
+
+You can download the shiny application for this repository and run it from you R-Studio or you can
+access through the shinyapp server using https://mcastrol.shinyapps.io/finalassigment/.
+
+You choose the type of predictor among the options: Year, Age, Education and Race, and the app shows you a plot with the regression line.
+
+If you input a year, age, education level and race, you can obtyain the raw wage in dolars of a person, 
+calculated using a regresion linear model of the wage respect of year, ager, education and race.
+
+## Final
+
+Thanks for your attention!
+
+
+
