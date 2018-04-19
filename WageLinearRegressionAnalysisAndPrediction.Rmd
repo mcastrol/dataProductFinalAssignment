@@ -23,7 +23,7 @@ Moreover, you can predict the wage ($) of a person by entering the year, age, ed
 
 You can download the shiny application for this repository and run it from you R-Studio or you can
 access through the shinyapp server using https://mcastrol.shinyapps.io/finalassigment/
-Please, if you get an error, load again the page.
+Please, if you get an error, load again the page (F5)
 
 ```{r, echo=FALSE, fig.cap="App user interface", out.width = '100%'}
 knitr::include_graphics("DPA.png")
