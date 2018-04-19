@@ -9,14 +9,6 @@ output: ioslides_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Introduction 
-
-This is the presentation of the final project of Data Product Course. 
-This peer assessed assignment has two parts. 
-
--First, I created a Shiny application and deployed it on Rstudio's servers. 
-
--Second, I prepared this presentation about my application.
 
 ## Shiny Application
 
@@ -27,21 +19,39 @@ the predictor among Year, age, Education and race.
 
 Moreover, you can predict the wage ($) of a person by entering the year, age, education and race.
 
+## Description  
+
+You can download the shiny application for this repository and run it from you R-Studio or you can
+access through the shinyapp server using https://mcastrol.shinyapps.io/finalassigment/
+Please, if you get an error, load again the page.
+
+```{r, echo=FALSE, fig.cap="App user interface", out.width = '100%'}
+knitr::include_graphics("DPA.png")
+```
+
 
 ## Instructions to run it 
 
-You can download the shiny application for this repository and run it from you R-Studio or you can
-access through the shinyapp server using https://mcastrol.shinyapps.io/finalassigment/.
-Please, if you get an error, load again the page.
 
 You choose the type of predictor among the options: Year, Age, Education and Race, and the app shows you a plot with the regression line.
-
-If you input a year, age, education level and race, you can obtyain the raw wage in dolars of a person, 
+The graphic is done using this base function 
+```{r,eval=FALSE, echo=TRUE}
+ggplot(fit$model, aes_string(x = names(fit$model)[2], y = names(fit$model)[1])) + 
+    geom_point() +
+    stat_smooth(method = "lm", col = "red") +
+    labs(title = paste("Wage by",predictor, ": Adj R2 = ",signif(summary(fit)$adj.r.squared, 5),
+          "Intercept =",signif(fit$coef[[1]],5 ),
+          " Slope =",signif(fit$coef[[2]], 5),
+          " P =",signif(summary(fit)$coef[2,4], 5)))
+```
+If you input a year, age, education level and race, you obtain the wage in dolars of a person, 
 calculated using a regresion linear model of the wage respect of year, ager, education and race.
 
-## Final
+##
 
-Thanks for your attention!
 
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("THANKS.png")
+```
 
 
